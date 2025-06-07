@@ -1,4 +1,4 @@
-namespace noAiDinner.Contracts.Authentication;
+namespace NoAiDinner.Contracts.Authentication;
 
 public record RegisterRequest(
     string FirstName,

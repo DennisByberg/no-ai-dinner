@@ -1,4 +1,4 @@
-namespace noAiDinner.Contracts.Authentication;
+namespace NoAiDinner.Contracts.Authentication;
 
 public record LoginRequest(
     string Email,

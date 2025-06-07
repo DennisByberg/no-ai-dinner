@@ -1,7 +1,16 @@
-var builder = WebApplication.CreateBuilder(args);
+using NoAiDinner.Application;
+using NoAiDinner.Infrastructure;
 
-builder.Services.AddOpenApi();
-builder.Services.AddControllers();
+var builder = WebApplication.CreateBuilder(args);
+{
+    builder.Services.AddOpenApi();
+    builder.Services.AddControllers();
+
+    // Register Clean Architecture layer services
+    builder.Services
+        .AddApplication()
+        .AddInfrastructure();
+}
 
 var app = builder.Build();
 
